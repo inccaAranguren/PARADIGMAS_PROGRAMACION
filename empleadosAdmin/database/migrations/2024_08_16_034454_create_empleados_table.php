@@ -13,8 +13,16 @@ return new class extends Migration
     {
         Schema::create('empleados', function (Blueprint $table) {
             $table->id();
+            $table->string('Nombre');
+            $table->string('Apellido');
+            $table->string('Email')->unique();
+ /*            $table->string('Telefono')->nullable();
+            $table->string('Puesto');
+            $table->decimal('Salario', 8, 2); // 8 dígitos en total, 2 después del punto decimal
+            $table->date('Fecha_contratacion'); */
+            $table->string('Foto');
             $table->timestamps();
-        }); 
+        });
     }
 
     /**
